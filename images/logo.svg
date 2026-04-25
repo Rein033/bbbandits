@@ -1,24 +1,88 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 72">
-  <!-- Background pill -->
-  <rect x="1" y="1" width="298" height="70" rx="6" fill="#1a1a1a" stroke="#f5600a" stroke-width="1.5" stroke-dasharray="5 3" opacity="0.6"/>
-  <!-- BB -->
-  <text x="18" y="54"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 460">
+  <!-- Shield body -->
+  <path d="
+    M 200 448
+    L 48 328
+    L 32 90
+    Q 32 52 68 52
+    L 130 52 L 140 22 L 155 52
+    L 200 52
+    L 245 52 L 260 22 L 270 52
+    L 332 52
+    Q 368 52 368 90
+    L 352 328
+    Z"
+    fill="#161616"
+    stroke="#cc4800"
+    stroke-width="10"
+    stroke-linejoin="round"
+  />
+
+  <!-- Topographic wavy texture lines -->
+  <g stroke="#333" stroke-width="1.2" fill="none" opacity="0.55">
+    <path d="M 80 140 Q 140 130 200 140 Q 260 150 320 140"/>
+    <path d="M 68 170 Q 134 158 200 168 Q 266 178 332 168"/>
+    <path d="M 62 200 Q 131 188 200 198 Q 269 208 338 198"/>
+    <path d="M 58 230 Q 130 217 200 228 Q 270 239 342 228"/>
+    <path d="M 60 260 Q 132 248 200 258 Q 268 268 340 258"/>
+    <path d="M 65 290 Q 135 278 200 289 Q 265 300 335 289"/>
+    <path d="M 72 320 Q 140 308 200 319 Q 260 330 328 319"/>
+    <path d="M 88 350 Q 148 338 200 349 Q 252 360 312 349"/>
+    <path d="M 110 378 Q 158 366 200 377 Q 242 388 290 377"/>
+    <path d="M 140 404 Q 170 394 200 404 Q 230 414 260 404"/>
+  </g>
+
+  <!-- ── Raccoon face ── -->
+
+  <!-- Forehead / crown triangle -->
+  <path d="M 200 75 L 175 110 L 225 110 Z"
+        fill="none" stroke="#cc4800" stroke-width="5" stroke-linejoin="round"/>
+
+  <!-- Left ear (inside shield, above eyes) -->
+  <path d="M 140 52 L 130 22 L 155 52" fill="none" stroke="#cc4800" stroke-width="6" stroke-linejoin="round"/>
+  <!-- Right ear -->
+  <path d="M 260 52 L 270 22 L 245 52" fill="none" stroke="#cc4800" stroke-width="6" stroke-linejoin="round"/>
+
+  <!-- Face outline (diamond / angular) -->
+  <path d="M 200 105 L 270 165 L 252 248 L 200 272 L 148 248 L 130 165 Z"
+        fill="none" stroke="#cc4800" stroke-width="6" stroke-linejoin="round"/>
+
+  <!-- Raccoon eye-mask band -->
+  <path d="M 130 165 L 148 145 L 178 158 L 200 148 L 222 158 L 252 145 L 270 165
+           L 248 180 L 220 170 L 200 178 L 180 170 L 152 180 Z"
+        fill="#cc4800" opacity="0.92"/>
+
+  <!-- Left eye (cut-out of mask) -->
+  <ellipse cx="163" cy="162" rx="15" ry="10" fill="#161616"/>
+
+  <!-- Right eye (cut-out of mask) -->
+  <ellipse cx="237" cy="162" rx="15" ry="10" fill="#161616"/>
+
+  <!-- Cheek fur lines -->
+  <path d="M 148 200 L 165 195" stroke="#cc4800" stroke-width="3" stroke-linecap="round"/>
+  <path d="M 145 212 L 165 207" stroke="#cc4800" stroke-width="3" stroke-linecap="round"/>
+  <path d="M 252 200 L 235 195" stroke="#cc4800" stroke-width="3" stroke-linecap="round"/>
+  <path d="M 255 212 L 235 207" stroke="#cc4800" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Nose / muzzle diamond -->
+  <path d="M 188 218 L 200 232 L 212 218 L 200 212 Z"
+        fill="#cc4800"/>
+
+  <!-- Text: THE -->
+  <text x="200" y="318"
+        text-anchor="middle"
         font-family="'Arial Black','Helvetica Neue',Arial,sans-serif"
         font-weight="900"
-        font-size="50"
-        fill="#ffffff"
-        letter-spacing="-2">BB</text>
-  <!-- bandits -->
-  <text x="100" y="54"
+        font-size="36"
+        letter-spacing="10"
+        fill="#cc4800">THE</text>
+
+  <!-- Text: BB BANDITS -->
+  <text x="200" y="378"
+        text-anchor="middle"
         font-family="'Arial Black','Helvetica Neue',Arial,sans-serif"
         font-weight="900"
-        font-size="50"
-        fill="#f5600a"
-        letter-spacing="-2">bandits</text>
-  <!-- .nl -->
-  <text x="266" y="54"
-        font-family="'Arial Black','Helvetica Neue',Arial,sans-serif"
-        font-weight="900"
-        font-size="28"
-        fill="#888888">.nl</text>
+        font-size="42"
+        letter-spacing="2"
+        fill="#cc4800">BB BANDITS</text>
 </svg>
