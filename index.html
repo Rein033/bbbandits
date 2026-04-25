@@ -1,363 +1,101 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BBbandits.nl – Airsoft Team</title>
-  <meta name="description" content="BBbandits – een hecht airsoft team uit Nederland. Bekijk onze game footage, leer ons team kennen en neem contact op." />
+  <meta name="description" content="BBbandits – airsoft team Nederland. Game footage, team info en meer." />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <!-- NAV -->
-  <header id="header">
-    <nav class="nav container">
-      <a href="#home" class="nav__logo">
-        <picture>
-          <source srcset="images/logo.png" type="image/png">
-          <img src="images/logo.svg" alt="BBbandits" class="nav__logo-img">
-        </picture>
-      </a>
-      <button class="nav__toggle" id="navToggle" aria-label="Menu openen">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav__links" id="navLinks">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#videos">Video's</a></li>
-        <li><a href="#team">Team</a></li>
-        <li><a href="#over-ons">Over ons</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+<header id="header">
+  <nav class="nav container">
+    <a href="index.html" class="nav__logo">
+      <picture><source srcset="images/logo.png" type="image/png"><img src="images/logo.svg" alt="BBbandits" class="nav__logo-img"></picture>
+    </a>
+    <button class="nav__toggle" id="navToggle" aria-label="Menu openen"><span></span><span></span><span></span></button>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="index.html" data-page="index.html">Home</a></li>
+      <li><a href="videos.html" data-page="videos.html">Video's</a></li>
+      <li><a href="team.html" data-page="team.html">Team</a></li>
+      <li><a href="over-ons.html" data-page="over-ons.html">Over ons</a></li>
+      <li><a href="contact.html" data-page="contact.html">Contact</a></li>
+      <li><a href="admin/" class="nav__admin-link">⚙ Admin</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero__overlay"></div>
+  <div class="hero__content container">
+    <div class="hero__logo-wrap">
+      <picture><source srcset="images/logo.png" type="image/png"><img src="images/logo.svg" alt="BBbandits" class="hero__logo-img"></picture>
+    </div>
+    <p class="hero__label">Airsoft Team Nederland</p>
+    <h1 class="hero__title">BB<span>bandits</span></h1>
+    <p class="hero__sub">Tactical. United. Undefeated.</p>
+    <div class="hero__actions">
+      <a href="videos.html" class="btn btn--primary">Bekijk Video's</a>
+      <a href="over-ons.html" class="btn btn--outline">Over ons</a>
+    </div>
+  </div>
+  <div class="hero__scroll"><span></span></div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="container stats__grid">
+    <div class="stat"><span class="stat__number" data-target="42">0</span><span class="stat__label">Games gespeeld</span></div>
+    <div class="stat"><span class="stat__number" data-target="8">0</span><span class="stat__label">Teamleden</span></div>
+    <div class="stat"><span class="stat__number" data-target="15">0</span><span class="stat__label">Video's online</span></div>
+    <div class="stat"><span class="stat__number" data-target="5">0</span><span class="stat__label">Jaar actief</span></div>
+  </div>
+</section>
+
+<!-- LAATSTE VIDEO'S -->
+<section class="section videos" style="background:var(--bg-2)">
+  <div class="container">
+    <div class="section__header">
+      <span class="section__tag">Game Footage</span>
+      <h2 class="section__title">Laatste Video's</h2>
+      <p class="section__desc">Onze meest recente game footage, highlights en behind-the-scenes.</p>
+    </div>
+    <div class="videos__grid" id="homeVideos"></div>
+    <div class="section-cta">
+      <a href="videos.html" class="btn btn--primary">Alle video's bekijken</a>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM PREVIEW -->
+<section class="section team">
+  <div class="container">
+    <div class="section__header">
+      <span class="section__tag">De Crew</span>
+      <h2 class="section__title">Ons Team</h2>
+      <p class="section__desc">Maak kennis met de BBbandits – één doel, één team.</p>
+    </div>
+    <div class="team__grid" id="homeTeam"></div>
+    <div class="section-cta">
+      <a href="team.html" class="btn btn--outline">Heel het team zien</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <a href="index.html" class="footer__logo"><picture><source srcset="images/logo.png" type="image/png"><img src="images/logo.svg" alt="BBbandits" class="footer__logo-img"></picture></a>
+    <p class="footer__copy">&copy; 2025 BBbandits.nl · Airsoft Team Nederland</p>
+    <nav class="footer__nav">
+      <a href="index.html">Home</a><a href="videos.html">Video's</a><a href="team.html">Team</a><a href="contact.html">Contact</a>
     </nav>
-  </header>
+  </div>
+</footer>
 
-  <!-- HERO -->
-  <section id="home" class="hero">
-    <div class="hero__overlay"></div>
-    <div class="hero__content container">
-      <div class="hero__logo-wrap">
-        <picture>
-          <source srcset="images/logo.png" type="image/png">
-          <img src="images/logo.svg" alt="BBbandits" class="hero__logo-img">
-        </picture>
-      </div>
-      <p class="hero__label">Airsoft Team Nederland</p>
-      <h1 class="hero__title">BB<span>bandits</span></h1>
-      <p class="hero__sub">Tactical. United. Undefeated.</p>
-      <div class="hero__actions">
-        <a href="#videos" class="btn btn--primary">Bekijk Video's</a>
-        <a href="#over-ons" class="btn btn--outline">Over ons</a>
-      </div>
-    </div>
-    <div class="hero__scroll">
-      <span></span>
-    </div>
-  </section>
-
-  <!-- STATS -->
-  <section class="stats">
-    <div class="container stats__grid">
-      <div class="stat">
-        <span class="stat__number" data-target="42">0</span>
-        <span class="stat__label">Games gespeeld</span>
-      </div>
-      <div class="stat">
-        <span class="stat__number" data-target="8">0</span>
-        <span class="stat__label">Teamleden</span>
-      </div>
-      <div class="stat">
-        <span class="stat__number" data-target="15">0</span>
-        <span class="stat__label">Video's online</span>
-      </div>
-      <div class="stat">
-        <span class="stat__number" data-target="5">0</span>
-        <span class="stat__label">Jaar actief</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- VIDEOS -->
-  <section id="videos" class="section videos">
-    <div class="container">
-      <div class="section__header">
-        <span class="section__tag">Game Footage</span>
-        <h2 class="section__title">Onze Video's</h2>
-        <p class="section__desc">Bekijk onze meest recente games, highlights en behind-the-scenes materiaal.</p>
-      </div>
-
-      <div class="video-filters">
-        <button class="filter-btn active" data-filter="all">Alles</button>
-        <button class="filter-btn" data-filter="highlight">Highlights</button>
-        <button class="filter-btn" data-filter="game">Full Game</button>
-        <button class="filter-btn" data-filter="bts">Behind the Scenes</button>
-      </div>
-
-      <div class="videos__grid" id="videosGrid">
-
-        <div class="video-card" data-category="highlight">
-          <div class="video-card__thumb">
-            <div class="video-thumb-placeholder">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-            </div>
-            <span class="video-card__tag">Highlight</span>
-          </div>
-          <div class="video-card__info">
-            <h3>Seizoen 2024 – Best Moments</h3>
-            <p>De beste kills, flanks en teamwork uit seizoen 2024.</p>
-            <span class="video-card__meta">12:34 · 2024</span>
-          </div>
-        </div>
-
-        <div class="video-card" data-category="game">
-          <div class="video-card__thumb">
-            <div class="video-thumb-placeholder">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-            </div>
-            <span class="video-card__tag">Full Game</span>
-          </div>
-          <div class="video-card__info">
-            <h3>CQB Battle – Warehouse</h3>
-            <p>Intense close-quarters gevechten in een industrieel pand.</p>
-            <span class="video-card__meta">45:10 · 2024</span>
-          </div>
-        </div>
-
-        <div class="video-card" data-category="bts">
-          <div class="video-card__thumb">
-            <div class="video-thumb-placeholder">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-            </div>
-            <span class="video-card__tag">Behind the Scenes</span>
-          </div>
-          <div class="video-card__info">
-            <h3>Loadout &amp; Gear Review 2024</h3>
-            <p>Een kijkje in onze gear en hoe we ons voorbereiden.</p>
-            <span class="video-card__meta">08:22 · 2024</span>
-          </div>
-        </div>
-
-        <div class="video-card" data-category="highlight">
-          <div class="video-card__thumb">
-            <div class="video-thumb-placeholder">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-            </div>
-            <span class="video-card__tag">Highlight</span>
-          </div>
-          <div class="video-card__info">
-            <h3>Epic Flank – Forest Op</h3>
-            <p>Een perfecte flank manoeuvre diep in het bos.</p>
-            <span class="video-card__meta">04:58 · 2023</span>
-          </div>
-        </div>
-
-        <div class="video-card" data-category="game">
-          <div class="video-card__thumb">
-            <div class="video-thumb-placeholder">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-            </div>
-            <span class="video-card__tag">Full Game</span>
-          </div>
-          <div class="video-card__info">
-            <h3>Milsim Weekend – D-Day Scenario</h3>
-            <p>Twee dagen hardcore milsim met meer dan 200 deelnemers.</p>
-            <span class="video-card__meta">1:12:40 · 2023</span>
-          </div>
-        </div>
-
-        <div class="video-card" data-category="bts">
-          <div class="video-card__thumb">
-            <div class="video-thumb-placeholder">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-            </div>
-            <span class="video-card__tag">Behind the Scenes</span>
-          </div>
-          <div class="video-card__info">
-            <h3>Teambuilding &amp; Training</h3>
-            <p>Hoe wij als team trainen en communicatie verbeteren.</p>
-            <span class="video-card__meta">15:05 · 2023</span>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="videos__cta">
-        <a href="https://www.youtube.com/@BBbandits" target="_blank" rel="noopener" class="btn btn--primary">
-          Bekijk alle video's op YouTube
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- TEAM -->
-  <section id="team" class="section team">
-    <div class="container">
-      <div class="section__header">
-        <span class="section__tag">De Crew</span>
-        <h2 class="section__title">Ons Team</h2>
-        <p class="section__desc">Maak kennis met de BBbandits – een hecht stel spelers met één doel: winnen én plezier maken.</p>
-      </div>
-      <div class="team__grid">
-
-        <div class="team-card">
-          <div class="team-card__avatar">
-            <div class="avatar-placeholder">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
-            </div>
-          </div>
-          <h3 class="team-card__name">Ghost</h3>
-          <span class="team-card__role">Team Captain · Sniper</span>
-          <p class="team-card__bio">Stille doder op lange afstand. Coördineert het team met ijzeren discipline.</p>
-        </div>
-
-        <div class="team-card">
-          <div class="team-card__avatar">
-            <div class="avatar-placeholder">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
-            </div>
-          </div>
-          <h3 class="team-card__name">Bandit</h3>
-          <span class="team-card__role">Co-Captain · CQB Specialist</span>
-          <p class="team-card__bio">Eerste door de deur. Niets is te close-quarters voor deze enfant terrible.</p>
-        </div>
-
-        <div class="team-card">
-          <div class="team-card__avatar">
-            <div class="avatar-placeholder">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
-            </div>
-          </div>
-          <h3 class="team-card__name">Reaper</h3>
-          <span class="team-card__role">Support · HMG</span>
-          <p class="team-card__bio">Legt vijandige linies neer met onderdrukkingsvuur zodat het team kan bewegen.</p>
-        </div>
-
-        <div class="team-card">
-          <div class="team-card__avatar">
-            <div class="avatar-placeholder">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
-            </div>
-          </div>
-          <h3 class="team-card__name">Viper</h3>
-          <span class="team-card__role">Scout · Flanker</span>
-          <p class="team-card__bio">Snelste speler van het team. Vindt altijd de zwakke plek in de vijandelijke verdediging.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- OVER ONS -->
-  <section id="over-ons" class="section about">
-    <div class="container about__inner">
-      <div class="about__visual">
-        <div class="about__logo-circle">
-          <picture>
-            <source srcset="images/logo.png" type="image/png">
-            <img src="images/logo.svg" alt="BBbandits logo" class="about__logo-img">
-          </picture>
-        </div>
-        <div class="about__badge">Est. 2019</div>
-      </div>
-      <div class="about__text">
-        <span class="section__tag">Over ons</span>
-        <h2 class="section__title">Wie zijn de BBbandits?</h2>
-        <p>De BBbandits zijn een airsoft team opgericht in 2019, gevestigd in Nederland. Wij spelen op diverse locaties door het hele land – van dichte bossen tot urbane CQB velden.</p>
-        <p>Ons team bestaat uit spelers die niet alleen winnen willen, maar ook een goede tijd willen hebben. We filmen onze games en plaatsen de beste momenten op onze YouTube kanaal zodat iedereen mee kan genieten.</p>
-        <p>Of je nu een doorgewinterde airsofter bent of gewoon nieuwsgierig naar de sport – welkom op onze site!</p>
-        <div class="about__tags">
-          <span>Milsim</span>
-          <span>CQB</span>
-          <span>Skirmish</span>
-          <span>Team Play</span>
-          <span>Nederland</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="section contact">
-    <div class="container">
-      <div class="section__header">
-        <span class="section__tag">Neem contact op</span>
-        <h2 class="section__title">Contact</h2>
-        <p class="section__desc">Vragen, samenwerking of wil je meedoen? Stuur ons een bericht!</p>
-      </div>
-      <div class="contact__inner">
-        <form class="contact__form" id="contactForm" novalidate>
-          <div class="form-group">
-            <label for="name">Naam</label>
-            <input type="text" id="name" name="name" placeholder="Jouw naam" required />
-          </div>
-          <div class="form-group">
-            <label for="email">E-mailadres</label>
-            <input type="email" id="email" name="email" placeholder="jouw@email.nl" required />
-          </div>
-          <div class="form-group">
-            <label for="subject">Onderwerp</label>
-            <select id="subject" name="subject">
-              <option value="">Selecteer onderwerp</option>
-              <option value="meedoen">Ik wil meedoen</option>
-              <option value="samenwerking">Samenwerking</option>
-              <option value="video">Vraag over video</option>
-              <option value="anders">Anders</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="message">Bericht</label>
-            <textarea id="message" name="message" rows="5" placeholder="Schrijf hier je bericht..." required></textarea>
-          </div>
-          <button type="submit" class="btn btn--primary btn--full">Verstuur bericht</button>
-          <div class="form-success" id="formSuccess">Bericht verstuurd! We reageren zo snel mogelijk.</div>
-        </form>
-        <div class="contact__info">
-          <h3>Vind ons ook hier</h3>
-          <ul class="contact__socials">
-            <li>
-              <a href="https://www.youtube.com/@BBbandits" target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8s-.2-1.4-.8-2c-.8-.8-1.6-.8-2-.9C16.2 5 12 5 12 5s-4.2 0-7 .1c-.4.1-1.3.1-2 .9-.6.6-.8 2-.8 2S2 9.6 2 11.2v1.5c0 1.6.2 3.2.2 3.2s.2 1.4.8 2c.8.8 1.8.8 2.2.8C6.8 19 12 19 12 19s4.2 0 7-.1c.4-.1 1.3-.1 2-.9.6-.6.8-2 .8-2s.2-1.6.2-3.2v-1.5C22 9.6 21.8 8 21.8 8zM9.7 14.5V9l5.4 2.8-5.4 2.7z"/></svg>
-                YouTube
-              </a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/bbbandits" target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8 0 3.2 0 3.6-.1 4.8-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1-3.2 0-3.6 0-4.8-.1-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.3 2.2 12c0-3.2 0-3.6.1-4.8C2.4 3.9 4 2.3 7.2 2.2c1.2-.1 1.6-.1 4.8-.1zm0-2.2C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1.1 8.3 0 8.7 0 12c0 3.3 0 3.7.1 4.9.2 4.4 2.6 6.8 7 7C8.3 24 8.7 24 12 24c3.3 0 3.7 0 4.9-.1 4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9 0-3.3 0-3.7-.1-4.9-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4A6.2 6.2 0 0 0 12 5.8zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8z"/></svg>
-                Instagram
-              </a>
-            </li>
-            <li>
-              <a href="mailto:info@bbbandits.nl">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                info@bbbandits.nl
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer__inner">
-      <a href="#home" class="footer__logo">
-        <picture>
-          <source srcset="images/logo.png" type="image/png">
-          <img src="images/logo.svg" alt="BBbandits" class="footer__logo-img">
-        </picture>
-      </a>
-      <p class="footer__copy">&copy; 2025 BBbandits.nl · Airsoft Team Nederland · Alle rechten voorbehouden</p>
-      <nav class="footer__nav">
-        <a href="#home">Home</a>
-        <a href="#videos">Video's</a>
-        <a href="#team">Team</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </footer>
-
-  <script src="js/main.js"></script>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

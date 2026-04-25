@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – BBbandits.nl</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<header id="header">
+  <nav class="nav container">
+    <a href="index.html" class="nav__logo">
+      <picture><source srcset="images/logo.png" type="image/png"><img src="images/logo.svg" alt="BBbandits" class="nav__logo-img"></picture>
+    </a>
+    <button class="nav__toggle" id="navToggle" aria-label="Menu openen"><span></span><span></span><span></span></button>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="index.html" data-page="index.html">Home</a></li>
+      <li><a href="videos.html" data-page="videos.html">Video's</a></li>
+      <li><a href="team.html" data-page="team.html">Team</a></li>
+      <li><a href="over-ons.html" data-page="over-ons.html">Over ons</a></li>
+      <li><a href="contact.html" data-page="contact.html">Contact</a></li>
+      <li><a href="admin/" class="nav__admin-link">⚙ Admin</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="page-hero">
+  <div class="container page-hero__content">
+    <span class="page-hero__tag">Neem contact op</span>
+    <h1 class="page-hero__title">Contact</h1>
+    <p class="page-hero__desc">Vragen, samenwerking of wil je meedoen? Stuur ons een bericht!</p>
+  </div>
+</div>
+
+<section class="section contact">
+  <div class="container contact__inner">
+    <form class="contact__form" id="contactForm" novalidate>
+      <div class="form-group">
+        <label for="name">Naam</label>
+        <input type="text" id="name" name="name" placeholder="Jouw naam" required />
+      </div>
+      <div class="form-group">
+        <label for="email">E-mailadres</label>
+        <input type="email" id="email" name="email" placeholder="jouw@email.nl" required />
+      </div>
+      <div class="form-group">
+        <label for="subject">Onderwerp</label>
+        <select id="subject" name="subject">
+          <option value="">Selecteer onderwerp</option>
+          <option value="meedoen">Ik wil meedoen</option>
+          <option value="samenwerking">Samenwerking</option>
+          <option value="video">Vraag over video</option>
+          <option value="anders">Anders</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="message">Bericht</label>
+        <textarea id="message" name="message" rows="5" placeholder="Schrijf hier je bericht..." required></textarea>
+      </div>
+      <button type="submit" class="btn btn--primary btn--full">Verstuur bericht</button>
+      <div class="form-success" id="formSuccess">Bericht verstuurd! We reageren zo snel mogelijk.</div>
+    </form>
+    <div class="contact__info">
+      <h3>Vind ons ook hier</h3>
+      <ul class="contact__socials">
+        <li>
+          <a href="#" data-yt target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8s-.2-1.4-.8-2c-.8-.8-1.6-.8-2-.9C16.2 5 12 5 12 5s-4.2 0-7 .1c-.4.1-1.3.1-2 .9-.6.6-.8 2-.8 2S2 9.6 2 11.2v1.5c0 1.6.2 3.2.2 3.2s.2 1.4.8 2c.8.8 1.8.8 2.2.8C6.8 19 12 19 12 19s4.2 0 7-.1c.4-.1 1.3-.1 2-.9.6-.6.8-2 .8-2s.2-1.6.2-3.2v-1.5C22 9.6 21.8 8 21.8 8zM9.7 14.5V9l5.4 2.8-5.4 2.7z"/></svg>
+            YouTube
+          </a>
+        </li>
+        <li>
+          <a href="#" data-ig target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8 0 3.2 0 3.6-.1 4.8-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1-3.2 0-3.6 0-4.8-.1-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.3 2.2 12c0-3.2 0-3.6.1-4.8C2.4 3.9 4 2.3 7.2 2.2c1.2-.1 1.6-.1 4.8-.1zm0-2.2C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1.1 8.3 0 8.7 0 12c0 3.3 0 3.7.1 4.9.2 4.4 2.6 6.8 7 7C8.3 24 8.7 24 12 24c3.3 0 3.7 0 4.9-.1 4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9 0-3.3 0-3.7-.1-4.9-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4A6.2 6.2 0 0 0 12 5.8zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8z"/></svg>
+            Instagram
+          </a>
+        </li>
+        <li>
+          <a href="mailto:Informatie@bbbandits.nl" data-mail data-keep-text>Informatie@bbbandits.nl</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <a href="index.html" class="footer__logo"><picture><source srcset="images/logo.png" type="image/png"><img src="images/logo.svg" alt="BBbandits" class="footer__logo-img"></picture></a>
+    <p class="footer__copy">&copy; 2025 BBbandits.nl · Airsoft Team Nederland</p>
+    <nav class="footer__nav">
+      <a href="index.html">Home</a><a href="videos.html">Video's</a><a href="team.html">Team</a><a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

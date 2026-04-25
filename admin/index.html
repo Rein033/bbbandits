@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin – BBbandits.nl</title>
+  <link rel="stylesheet" href="css/admin.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- ══ LOGIN ══════════════════════════════════════════════ -->
+<div id="loginScreen">
+  <div class="login-box">
+    <picture><source srcset="../images/logo.png" type="image/png"><img src="../images/logo.svg" alt="BBbandits" class="login-logo"></picture>
+    <h1>Admin Paneel</h1>
+    <p>Log in om content te beheren</p>
+    <form id="loginForm" novalidate>
+      <input type="password" id="pwInput" placeholder="Wachtwoord" autocomplete="current-password" />
+      <button type="submit" class="btn-admin btn-admin--primary btn-full">Inloggen</button>
+      <p class="login-error" id="loginError">Onjuist wachtwoord</p>
+    </form>
+    <a href="../index.html" class="login-back">← Terug naar website</a>
+  </div>
+</div>
+
+<!-- ══ DASHBOARD ══════════════════════════════════════════ -->
+<div id="dashboard" hidden>
+  <aside class="sidebar">
+    <div class="sidebar__logo">
+      <picture><source srcset="../images/logo.png" type="image/png"><img src="../images/logo.svg" alt="BBbandits" class="sidebar__logo-img"></picture>
+    </div>
+    <nav class="sidebar__nav">
+      <a href="#" class="sidebar__link active" data-tab="videos">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>Video's
+      </a>
+      <a href="#" class="sidebar__link" data-tab="team">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>Team
+      </a>
+      <a href="#" class="sidebar__link" data-tab="settings">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.14 12.94c.04-.3.06-.61.06-.94s-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>Instellingen
+      </a>
+    </nav>
+    <div class="sidebar__footer">
+      <a href="../index.html" class="sidebar__back">← Website</a>
+      <button id="logoutBtn" class="sidebar__logout">Uitloggen</button>
+    </div>
+  </aside>
+
+  <main class="admin-main">
+
+    <!-- ─ VIDEO'S TAB ─────────────────────────────────────── -->
+    <section class="admin-panel" id="panel-videos">
+      <div class="panel-header">
+        <h1>Video's beheren</h1>
+        <button class="btn-admin btn-admin--primary" id="addVideoBtn">+ Video toevoegen</button>
+      </div>
+
+      <!-- Add / Edit form -->
+      <div class="admin-card" id="videoForm" hidden>
+        <h2 id="videoFormTitle">Video toevoegen</h2>
+        <div class="form-grid">
+          <div class="a-form-group full">
+            <label>YouTube URL of Video ID</label>
+            <input type="text" id="vYoutube" placeholder="https://www.youtube.com/watch?v=... of video ID" />
+          </div>
+          <div class="a-form-group full">
+            <label>Titel</label>
+            <input type="text" id="vTitle" placeholder="Titel van de video" />
+          </div>
+          <div class="a-form-group full">
+            <label>Beschrijving</label>
+            <textarea id="vDesc" rows="3" placeholder="Korte beschrijving..."></textarea>
+          </div>
+          <div class="a-form-group">
+            <label>Categorie</label>
+            <select id="vCategory">
+              <option value="highlight">Highlight</option>
+              <option value="game">Full Game</option>
+              <option value="bts">Behind the Scenes</option>
+            </select>
+          </div>
+          <div class="a-form-group">
+            <label>Duur (bijv. 12:34)</label>
+            <input type="text" id="vDuration" placeholder="12:34" />
+          </div>
+          <div class="a-form-group">
+            <label>Jaar</label>
+            <input type="text" id="vYear" placeholder="2024" maxlength="4" />
+          </div>
+        </div>
+        <div class="form-actions">
+          <button class="btn-admin btn-admin--primary" id="saveVideoBtn">Opslaan</button>
+          <button class="btn-admin btn-admin--ghost" id="cancelVideoBtn">Annuleren</button>
+        </div>
+        <input type="hidden" id="vEditId" />
+      </div>
+
+      <!-- Video list -->
+      <div id="videoList" class="item-list"></div>
+    </section>
+
+    <!-- ─ TEAM TAB ────────────────────────────────────────── -->
+    <section class="admin-panel" id="panel-team" hidden>
+      <div class="panel-header">
+        <h1>Team beheren</h1>
+        <button class="btn-admin btn-admin--primary" id="addMemberBtn">+ Lid toevoegen</button>
+      </div>
+
+      <div class="admin-card" id="memberForm" hidden>
+        <h2 id="memberFormTitle">Lid toevoegen</h2>
+        <div class="form-grid">
+          <div class="a-form-group">
+            <label>Naam / Callsign</label>
+            <input type="text" id="mName" placeholder="Ghost" />
+          </div>
+          <div class="a-form-group">
+            <label>Rol</label>
+            <input type="text" id="mRole" placeholder="Team Captain · Sniper" />
+          </div>
+          <div class="a-form-group full">
+            <label>Bio</label>
+            <textarea id="mBio" rows="3" placeholder="Korte beschrijving van dit teamlid..."></textarea>
+          </div>
+          <div class="a-form-group full">
+            <label>Avatar URL <span style="color:var(--a-muted);font-weight:400">(optioneel – link naar afbeelding)</span></label>
+            <input type="url" id="mAvatar" placeholder="https://..." />
+          </div>
+        </div>
+        <div class="form-actions">
+          <button class="btn-admin btn-admin--primary" id="saveMemberBtn">Opslaan</button>
+          <button class="btn-admin btn-admin--ghost" id="cancelMemberBtn">Annuleren</button>
+        </div>
+        <input type="hidden" id="mEditId" />
+      </div>
+
+      <div id="memberList" class="item-list"></div>
+    </section>
+
+    <!-- ─ INSTELLINGEN TAB ────────────────────────────────── -->
+    <section class="admin-panel" id="panel-settings" hidden>
+      <div class="panel-header"><h1>Instellingen</h1></div>
+
+      <div class="admin-card">
+        <h2>Sociale media &amp; contact</h2>
+        <div class="form-grid">
+          <div class="a-form-group full">
+            <label>YouTube kanaal URL</label>
+            <input type="url" id="sYoutube" />
+          </div>
+          <div class="a-form-group full">
+            <label>Instagram URL</label>
+            <input type="url" id="sInstagram" />
+          </div>
+          <div class="a-form-group full">
+            <label>E-mailadres</label>
+            <input type="email" id="sEmail" />
+          </div>
+        </div>
+        <div class="form-actions">
+          <button class="btn-admin btn-admin--primary" id="saveSocialBtn">Opslaan</button>
+        </div>
+        <p class="save-confirm" id="socialSaved">Opgeslagen!</p>
+      </div>
+
+      <div class="admin-card" style="margin-top:1.5rem">
+        <h2>Wachtwoord wijzigen</h2>
+        <div class="form-grid">
+          <div class="a-form-group">
+            <label>Nieuw wachtwoord</label>
+            <input type="password" id="sNewPw" placeholder="Nieuw wachtwoord" />
+          </div>
+          <div class="a-form-group">
+            <label>Bevestig wachtwoord</label>
+            <input type="password" id="sNewPw2" placeholder="Herhaal wachtwoord" />
+          </div>
+        </div>
+        <div class="form-actions">
+          <button class="btn-admin btn-admin--primary" id="savePwBtn">Wachtwoord opslaan</button>
+        </div>
+        <p class="save-confirm" id="pwSaved"></p>
+      </div>
+
+      <div class="admin-card" style="margin-top:1.5rem">
+        <h2>Gegevens resetten</h2>
+        <p style="color:var(--a-muted);margin-bottom:1rem">Verwijdert alle opgeslagen video's en teamleden en herstelt de standaardgegevens.</p>
+        <button class="btn-admin btn-admin--danger" id="resetBtn">Alles resetten</button>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="../js/data.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>
