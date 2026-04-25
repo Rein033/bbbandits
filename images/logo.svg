@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 72">
+  <!-- Background pill -->
+  <rect x="1" y="1" width="298" height="70" rx="6" fill="#1a1a1a" stroke="#f5600a" stroke-width="1.5" stroke-dasharray="5 3" opacity="0.6"/>
+  <!-- BB -->
+  <text x="18" y="54"
+        font-family="'Arial Black','Helvetica Neue',Arial,sans-serif"
+        font-weight="900"
+        font-size="50"
+        fill="#ffffff"
+        letter-spacing="-2">BB</text>
+  <!-- bandits -->
+  <text x="100" y="54"
+        font-family="'Arial Black','Helvetica Neue',Arial,sans-serif"
+        font-weight="900"
+        font-size="50"
+        fill="#f5600a"
+        letter-spacing="-2">bandits</text>
+  <!-- .nl -->
+  <text x="266" y="54"
+        font-family="'Arial Black','Helvetica Neue',Arial,sans-serif"
+        font-weight="900"
+        font-size="28"
+        fill="#888888">.nl</text>
+</svg>
