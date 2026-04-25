@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Video's – BBbandits.nl</title>
+  <meta name="description" content="Alle game footage, highlights en behind-the-scenes van de BBbandits." />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
@@ -12,20 +14,25 @@
 <header id="header">
   <nav class="nav container">
     <a href="index.html" class="nav__logo">
-      <picture><source srcset="images/logo.png" type="image/png"><img src="images/logo.svg" alt="BBbandits" class="nav__logo-img"></picture>
+      <picture>
+        <source srcset="images/logo.png" type="image/png">
+        <img src="images/logo.svg" alt="BBbandits" class="nav__logo-img">
+      </picture>
     </a>
-    <button class="nav__toggle" id="navToggle" aria-label="Menu openen"><span></span><span></span><span></span></button>
+    <button class="nav__toggle" id="navToggle" aria-label="Menu openen">
+      <span></span><span></span><span></span>
+    </button>
     <ul class="nav__links" id="navLinks">
-      <li><a href="index.html" data-page="index.html">Home</a></li>
-      <li><a href="videos.html" data-page="videos.html">Video's</a></li>
-      <li><a href="team.html" data-page="team.html">Team</a></li>
+      <li><a href="index.html"    data-page="index.html">Home</a></li>
+      <li><a href="videos.html"   data-page="videos.html">Video's</a></li>
+      <li><a href="team.html"     data-page="team.html">Team</a></li>
       <li><a href="over-ons.html" data-page="over-ons.html">Over ons</a></li>
-      <li><a href="contact.html" data-page="contact.html">Contact</a></li>
-      <li><a href="admin/" class="nav__admin-link">⚙ Admin</a></li>
+      <li><a href="contact.html"  data-page="contact.html">Contact</a></li>
     </ul>
   </nav>
 </header>
 
+<!-- ── PAGE HERO ──────────────────────────────────────────── -->
 <div class="page-hero">
   <div class="container page-hero__content">
     <span class="page-hero__tag">Game Footage</span>
@@ -34,32 +41,120 @@
   </div>
 </div>
 
-<section class="section videos" style="background:var(--bg-2)">
+<!-- ── VIDEO GRID ─────────────────────────────────────────── -->
+<section class="section" style="background:var(--bg-2)">
   <div class="container">
+
     <div class="video-filters">
       <button class="filter-btn active" data-filter="all">Alles</button>
       <button class="filter-btn" data-filter="highlight">Highlights</button>
       <button class="filter-btn" data-filter="game">Full Game</button>
       <button class="filter-btn" data-filter="bts">Behind the Scenes</button>
     </div>
-    <div class="videos__grid" id="videosGrid"></div>
-    <div class="videos__cta">
-      <a href="#" data-yt class="btn btn--primary">Bekijk ons YouTube kanaal</a>
+
+    <div class="videos__grid">
+
+      <div class="video-card" data-category="highlight">
+        <div class="video-card__thumb">
+          <div class="video-thumb-placeholder"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+          <span class="video-card__tag">Highlight</span>
+        </div>
+        <div class="video-card__info">
+          <h3>Seizoen 2024 – Best Moments</h3>
+          <p>De beste kills, flanks en teamwork uit seizoen 2024 op een rij.</p>
+          <span class="video-card__meta">12:34 · 2024</span>
+        </div>
+      </div>
+
+      <div class="video-card" data-category="game">
+        <div class="video-card__thumb">
+          <div class="video-thumb-placeholder"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+          <span class="video-card__tag">Full Game</span>
+        </div>
+        <div class="video-card__info">
+          <h3>CQB Battle – Warehouse</h3>
+          <p>Intense close-quarters gevechten in een industrieel pand.</p>
+          <span class="video-card__meta">45:10 · 2024</span>
+        </div>
+      </div>
+
+      <div class="video-card" data-category="bts">
+        <div class="video-card__thumb">
+          <div class="video-thumb-placeholder"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+          <span class="video-card__tag">Behind the Scenes</span>
+        </div>
+        <div class="video-card__info">
+          <h3>Loadout &amp; Gear Review 2024</h3>
+          <p>Een kijkje in onze gear en hoe we ons voorbereiden op een game.</p>
+          <span class="video-card__meta">08:22 · 2024</span>
+        </div>
+      </div>
+
+      <div class="video-card" data-category="highlight">
+        <div class="video-card__thumb">
+          <div class="video-thumb-placeholder"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+          <span class="video-card__tag">Highlight</span>
+        </div>
+        <div class="video-card__info">
+          <h3>Epic Flank – Forest Op</h3>
+          <p>Een perfecte flank manoeuvre diep in het bos.</p>
+          <span class="video-card__meta">04:58 · 2023</span>
+        </div>
+      </div>
+
+      <div class="video-card" data-category="game">
+        <div class="video-card__thumb">
+          <div class="video-thumb-placeholder"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+          <span class="video-card__tag">Full Game</span>
+        </div>
+        <div class="video-card__info">
+          <h3>Milsim Weekend – D-Day Scenario</h3>
+          <p>Twee dagen hardcore milsim met meer dan 200 deelnemers.</p>
+          <span class="video-card__meta">1:12:40 · 2023</span>
+        </div>
+      </div>
+
+      <div class="video-card" data-category="bts">
+        <div class="video-card__thumb">
+          <div class="video-thumb-placeholder"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+          <span class="video-card__tag">Behind the Scenes</span>
+        </div>
+        <div class="video-card__info">
+          <h3>Teambuilding &amp; Training</h3>
+          <p>Hoe wij als team trainen en communicatie verbeteren.</p>
+          <span class="video-card__meta">15:05 · 2023</span>
+        </div>
+      </div>
+
     </div>
+
+    <div class="section-cta" style="margin-top:3rem">
+      <a href="https://www.youtube.com/@BBbandits" target="_blank" rel="noopener" class="btn btn--primary">
+        Bekijk ons YouTube kanaal
+      </a>
+    </div>
+
   </div>
 </section>
 
 <footer class="footer">
   <div class="container footer__inner">
-    <a href="index.html" class="footer__logo"><picture><source srcset="images/logo.png" type="image/png"><img src="images/logo.svg" alt="BBbandits" class="footer__logo-img"></picture></a>
-    <p class="footer__copy">&copy; 2025 BBbandits.nl · Airsoft Team Nederland</p>
+    <a href="index.html" class="footer__logo">
+      <picture>
+        <source srcset="images/logo.png" type="image/png">
+        <img src="images/logo.svg" alt="BBbandits" class="footer__logo-img">
+      </picture>
+    </a>
+    <p class="footer__copy">&copy; 2025 BBbandits.nl &middot; Airsoft Team Nederland</p>
     <nav class="footer__nav">
-      <a href="index.html">Home</a><a href="videos.html">Video's</a><a href="team.html">Team</a><a href="contact.html">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="videos.html">Video's</a>
+      <a href="team.html">Team</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </div>
 </footer>
 
-<script src="js/data.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

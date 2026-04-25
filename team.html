@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Team – BBbandits.nl</title>
+  <meta name="description" content="Maak kennis met de BBbandits – airsoft team Nederland." />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
@@ -12,20 +14,25 @@
 <header id="header">
   <nav class="nav container">
     <a href="index.html" class="nav__logo">
-      <picture><source srcset="images/logo.png" type="image/png"><img src="images/logo.svg" alt="BBbandits" class="nav__logo-img"></picture>
+      <picture>
+        <source srcset="images/logo.png" type="image/png">
+        <img src="images/logo.svg" alt="BBbandits" class="nav__logo-img">
+      </picture>
     </a>
-    <button class="nav__toggle" id="navToggle" aria-label="Menu openen"><span></span><span></span><span></span></button>
+    <button class="nav__toggle" id="navToggle" aria-label="Menu openen">
+      <span></span><span></span><span></span>
+    </button>
     <ul class="nav__links" id="navLinks">
-      <li><a href="index.html" data-page="index.html">Home</a></li>
-      <li><a href="videos.html" data-page="videos.html">Video's</a></li>
-      <li><a href="team.html" data-page="team.html">Team</a></li>
+      <li><a href="index.html"    data-page="index.html">Home</a></li>
+      <li><a href="videos.html"   data-page="videos.html">Video's</a></li>
+      <li><a href="team.html"     data-page="team.html">Team</a></li>
       <li><a href="over-ons.html" data-page="over-ons.html">Over ons</a></li>
-      <li><a href="contact.html" data-page="contact.html">Contact</a></li>
-      <li><a href="admin/" class="nav__admin-link">⚙ Admin</a></li>
+      <li><a href="contact.html"  data-page="contact.html">Contact</a></li>
     </ul>
   </nav>
 </header>
 
+<!-- ── PAGE HERO ──────────────────────────────────────────── -->
 <div class="page-hero">
   <div class="container page-hero__content">
     <span class="page-hero__tag">De Crew</span>
@@ -34,33 +41,73 @@
   </div>
 </div>
 
-<section class="section team">
+<!-- ── TEAM GRID ──────────────────────────────────────────── -->
+<section class="section">
   <div class="container">
-    <div class="team__grid" id="teamGrid"></div>
+    <div class="team__grid">
+
+      <div class="team-card">
+        <div class="team-card__avatar"><div class="avatar-placeholder"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg></div></div>
+        <h3 class="team-card__name">Ghost</h3>
+        <span class="team-card__role">Team Captain · Sniper</span>
+        <p class="team-card__bio">Stille doder op lange afstand. Coördineert het team met ijzeren discipline en houdt overzicht in de heetste vuurgevechten.</p>
+      </div>
+
+      <div class="team-card">
+        <div class="team-card__avatar"><div class="avatar-placeholder"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg></div></div>
+        <h3 class="team-card__name">Bandit</h3>
+        <span class="team-card__role">Co-Captain · CQB Specialist</span>
+        <p class="team-card__bio">Eerste door de deur. Niets is te close-quarters voor deze enfant terrible van het team.</p>
+      </div>
+
+      <div class="team-card">
+        <div class="team-card__avatar"><div class="avatar-placeholder"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg></div></div>
+        <h3 class="team-card__name">Reaper</h3>
+        <span class="team-card__role">Support · HMG</span>
+        <p class="team-card__bio">Legt vijandige linies neer met onderdrukkingsvuur zodat de rest van het team veilig kan bewegen.</p>
+      </div>
+
+      <div class="team-card">
+        <div class="team-card__avatar"><div class="avatar-placeholder"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg></div></div>
+        <h3 class="team-card__name">Viper</h3>
+        <span class="team-card__role">Scout · Flanker</span>
+        <p class="team-card__bio">Snelste speler van het team. Vindt altijd de zwakke plek in de vijandelijke verdediging.</p>
+      </div>
+
+    </div>
   </div>
 </section>
 
-<!-- Word lid CTA -->
-<section style="background:var(--bg-2);border-top:1px solid var(--border);padding:4rem 0;text-align:center">
+<!-- ── WORD LID ────────────────────────────────────────────── -->
+<div style="background:var(--bg-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:5rem 0;text-align:center">
   <div class="container">
-    <span class="section__tag">Meedoen?</span>
-    <h2 class="section__title" style="margin-top:.5rem">Word lid van de BBbandits</h2>
-    <p style="color:var(--text-muted);margin-top:.75rem;margin-bottom:2rem">Geïnteresseerd in airsoft en wil je aansluiten? Neem contact op!</p>
-    <a href="contact.html" class="btn btn--primary">Neem contact op</a>
+    <span class="section__tag fade-in">Meedoen?</span>
+    <h2 class="section__title fade-in" style="margin-top:.5rem">Word lid van de BBbandits</h2>
+    <p class="fade-in" style="color:var(--text-muted);margin-top:.85rem;margin-bottom:2.25rem;max-width:480px;margin-left:auto;margin-right:auto">
+      Geïnteresseerd in airsoft en wil je aansluiten bij ons team? Neem contact op!
+    </p>
+    <a href="contact.html" class="btn btn--primary fade-in">Neem contact op</a>
   </div>
-</section>
+</div>
 
 <footer class="footer">
   <div class="container footer__inner">
-    <a href="index.html" class="footer__logo"><picture><source srcset="images/logo.png" type="image/png"><img src="images/logo.svg" alt="BBbandits" class="footer__logo-img"></picture></a>
-    <p class="footer__copy">&copy; 2025 BBbandits.nl · Airsoft Team Nederland</p>
+    <a href="index.html" class="footer__logo">
+      <picture>
+        <source srcset="images/logo.png" type="image/png">
+        <img src="images/logo.svg" alt="BBbandits" class="footer__logo-img">
+      </picture>
+    </a>
+    <p class="footer__copy">&copy; 2025 BBbandits.nl &middot; Airsoft Team Nederland</p>
     <nav class="footer__nav">
-      <a href="index.html">Home</a><a href="videos.html">Video's</a><a href="team.html">Team</a><a href="contact.html">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="videos.html">Video's</a>
+      <a href="team.html">Team</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </div>
 </footer>
 
-<script src="js/data.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
