@@ -53,16 +53,6 @@
   <div class="hero__scroll"><span></span></div>
 </section>
 
-<!-- ── STATS ──────────────────────────────────────────────── -->
-<section class="stats">
-  <div class="container stats__grid">
-    <div class="stat"><span class="stat__number" data-target="42">0</span><span class="stat__label">Games gespeeld</span></div>
-    <div class="stat"><span class="stat__number" data-target="8">0</span><span class="stat__label">Teamleden</span></div>
-    <div class="stat"><span class="stat__number" data-target="15">0</span><span class="stat__label">Video's online</span></div>
-    <div class="stat"><span class="stat__number" data-target="5">0</span><span class="stat__label">Jaar actief</span></div>
-  </div>
-</section>
-
 <!-- ── LAATSTE VIDEO'S ────────────────────────────────────── -->
 <section class="section" style="background:var(--bg-2)">
   <div class="container">
@@ -71,53 +61,11 @@
       <h2 class="section__title">Laatste Video's</h2>
       <p class="section__desc">Onze meest recente game footage, highlights en behind-the-scenes.</p>
     </div>
-    <div class="videos__grid">
-
-      <div class="video-card" data-category="highlight">
-        <div class="video-card__thumb">
-          <div class="video-thumb-placeholder">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-          </div>
-          <span class="video-card__tag">Highlight</span>
-        </div>
-        <div class="video-card__info">
-          <h3>Seizoen 2024 – Best Moments</h3>
-          <p>De beste kills, flanks en teamwork uit seizoen 2024 op een rij.</p>
-          <span class="video-card__meta">12:34 · 2024</span>
-        </div>
-      </div>
-
-      <div class="video-card" data-category="game">
-        <div class="video-card__thumb">
-          <div class="video-thumb-placeholder">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-          </div>
-          <span class="video-card__tag">Full Game</span>
-        </div>
-        <div class="video-card__info">
-          <h3>CQB Battle – Warehouse</h3>
-          <p>Intense close-quarters gevechten in een industrieel pand.</p>
-          <span class="video-card__meta">45:10 · 2024</span>
-        </div>
-      </div>
-
-      <div class="video-card" data-category="bts">
-        <div class="video-card__thumb">
-          <div class="video-thumb-placeholder">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-          </div>
-          <span class="video-card__tag">Behind the Scenes</span>
-        </div>
-        <div class="video-card__info">
-          <h3>Loadout &amp; Gear Review 2024</h3>
-          <p>Een kijkje in onze gear en hoe we ons voorbereiden.</p>
-          <span class="video-card__meta">08:22 · 2024</span>
-        </div>
-      </div>
-
-    </div>
-    <div class="section-cta">
-      <a href="videos.html" class="btn btn--primary">Alle video's bekijken</a>
+    <div class="videos__empty">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 8s-.2-1.4-.8-2c-.8-.8-1.6-.8-2-.9C16.2 5 12 5 12 5s-4.2 0-7 .1c-.4.1-1.3.1-2 .9-.6.6-.8 2-.8 2S2 9.6 2 11.2v1.5c0 1.6.2 3.2.2 3.2s.2 1.4.8 2c.8.8 1.8.8 2.2.8C6.8 19 12 19 12 19s4.2 0 7-.1c.4-.1 1.3-.1 2-.9.6-.6.8-2 .8-2s.2-1.6.2-3.2v-1.5C22 9.6 21.8 8 21.8 8zM9.7 14.5V9l5.4 2.8-5.4 2.7z"/></svg>
+      <h3>Video's komen eraan</h3>
+      <p>We zijn bezig met het uploaden van onze game footage. Volg ons alvast op YouTube!</p>
+      <a href="https://www.youtube.com/@BBbandits" target="_blank" rel="noopener" class="btn btn--primary">Bekijk ons YouTube kanaal</a>
     </div>
   </div>
 </section>
@@ -133,21 +81,30 @@
     <div class="team__grid">
 
       <div class="team-card">
-        <div class="team-card__avatar"><div class="avatar-placeholder"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg></div></div>
+        <div class="team-card__avatar">
+          <img src="images/team/airfox.jpg" alt="AirFox" class="avatar-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="avatar-placeholder" style="display:none"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg></div>
+        </div>
         <h3 class="team-card__name">AirFox</h3>
         <span class="team-card__role">Rein · Rifleman</span>
         <p class="team-card__bio">Degelijke schutter – zolang hij niet te hard hoeft te rennen. Zuurstofgebrek op volle sprint, maar achter cover is hij gevaarlijk.</p>
       </div>
 
       <div class="team-card">
-        <div class="team-card__avatar"><div class="avatar-placeholder"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg></div></div>
+        <div class="team-card__avatar">
+          <img src="images/team/blackninja.jpg" alt="Black Ninja" class="avatar-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="avatar-placeholder" style="display:none"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg></div>
+        </div>
         <h3 class="team-card__name">Black Ninja</h3>
         <span class="team-card__role">Dylan · Stealth &amp; CQB</span>
         <p class="team-card__bio">Hoe meer zwart hoe beter. Black Ninja verdwijnt in de schaduw dankzij zijn volledig zwarte outfit. Zien doen ze hem niet – voelen wel.</p>
       </div>
 
       <div class="team-card">
-        <div class="team-card__avatar"><div class="avatar-placeholder"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg></div></div>
+        <div class="team-card__avatar">
+          <img src="images/team/finn.jpg" alt="Finn" class="avatar-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="avatar-placeholder" style="display:none"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg></div>
+        </div>
         <h3 class="team-card__name">???</h3>
         <span class="team-card__role">Finn · Callsign: nog even wachten</span>
         <p class="team-card__bio">Finn doet gewoon mee – callsign of niet. De zoektocht naar de perfecte naam loopt nog. Suggesties welkom.</p>
